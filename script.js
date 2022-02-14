@@ -5,6 +5,15 @@ const image1 = document.getElementById("image1");
 const image1 = document.getElementById("image2");
 const image1 = document.getElementById("image3");
 const textbox = document.getElementById("text-box");
+const themeText = document.getElementById("toggle-text");
+
+function setToDark() {
+
+}
+
+function setToLight() {
+    
+}
 
 // Change root custom attribute 'data-theme'
 function changeTheme(event) {
@@ -12,10 +21,12 @@ function changeTheme(event) {
     if(event.target.checked)
     {
         document.documentElement.setAttribute("data-theme", "dark");
+        setToDark();
     }
     else
     {
         document.documentElement.setAttribute("data-theme", "light");
+        setToLight();
     }
 }
 
