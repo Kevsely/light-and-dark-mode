@@ -19,7 +19,13 @@ function setToDark() {
 }
 
 function setToLight() {
-    
+    themeText.textContent = "Light Mode";
+    themeLogo.classList.replace("fa-moon", "fa-sun");
+    navbar.style.backgroundColor = "rgb(255 255 255 / 50%)";
+    textbox.style.backgroundColor = "rgb(0 0 0 / 50%)";
+    image1.src = "img/undraw_proud_coder_light.svg";
+    image2.src = "img/undraw_feeling_proud_light.svg";
+    image3.src = "img/undraw_conceptual_idea_light.svg";
 }
 
 // Change root custom attribute 'data-theme'
