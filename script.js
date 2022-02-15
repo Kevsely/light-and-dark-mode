@@ -23,7 +23,15 @@ function setTheme (isDark) {
 function changeTheme(event) {
     document.documentElement.setAttribute("data-theme", event.target.checked ? "dark" : "light");
     setTheme(event.target.checked);
+    localStorage.setItem("theme", event.target.checked ? "dark" : "light");
 }
 
 // Event listener
 themeSwitchButton.addEventListener("change", changeTheme)
+
+//Checking the past theme by the user
+currentTheme = localStorage.getItem("theme");
+if(currentTheme === "dark")
+    document.documentElement.setAttribute("data-theme", "dark");
+else
+    document.documentElement.setAttribute("data-theme", "light");
